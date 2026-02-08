@@ -187,13 +187,23 @@ p {
    ACADEMIC HEADER BAR
    ============================================ */
 .header-main {
-    position: -webkit-sticky;
-    /* iOS support */
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1100;
-    /* Higher than any animations or reveal layers */
     width: 100%;
+}
+
+.header-spacer {
+    height: 125px;
+    /* Base height for header */
+}
+
+@media (max-width: 768px) {
+    .header-spacer {
+        height: 100px;
+        /* Reduced for mobile */
+    }
 }
 
 .academic-bar {
